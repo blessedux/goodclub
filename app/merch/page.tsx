@@ -102,46 +102,50 @@ export default function MerchPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+      <header className="sticky top-0 z-50 bg-black/95 backdrop-blur border-b border-gray-800">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
-              <Link href="/" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
-                GOODCLUB
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <img 
+                  src="/icon/goodclub_icon.png" 
+                  alt="GOODCLUB Logo" 
+                  className="w-20 h-20 object-contain"
+                />
               </Link>
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex space-x-6">
                 <button
                   onClick={() => setActiveCategory("coffee")}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeCategory === "coffee" ? "text-primary" : "text-muted-foreground"
+                  className={`text-sm font-medium transition-colors hover:text-white ${
+                    activeCategory === "coffee" ? "text-white" : "text-gray-400"
                   }`}
                 >
                   COFFEE
                 </button>
                 <button
                   onClick={() => setActiveCategory("merch")}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeCategory === "merch" ? "text-primary" : "text-muted-foreground"
+                  className={`text-sm font-medium transition-colors hover:text-white ${
+                    activeCategory === "merch" ? "text-white" : "text-gray-400"
                   }`}
                 >
                   MERCH
                 </button>
                 <button
                   onClick={() => setActiveCategory("magazine")}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeCategory === "magazine" ? "text-primary" : "text-muted-foreground"
+                  className={`text-sm font-medium transition-colors hover:text-white ${
+                    activeCategory === "magazine" ? "text-white" : "text-gray-400"
                   }`}
                 >
                   MAGAZINE
                 </button>
                 <button
                   onClick={() => setActiveCategory("all")}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeCategory === "all" ? "text-primary" : "text-muted-foreground"
+                  className={`text-sm font-medium transition-colors hover:text-white ${
+                    activeCategory === "all" ? "text-white" : "text-gray-400"
                   }`}
                 >
                   ALL
@@ -151,17 +155,17 @@ export default function MerchPage() {
 
             <div className="flex items-center space-x-4">
               <Link href="/">
-                <button className="text-foreground hover:text-primary transition-colors p-2" title="Back to Gallery">
+                <button className="text-white hover:text-gray-300 transition-colors p-2" title="Back to Gallery">
                   🏠
                 </button>
               </Link>
-              <button className="text-foreground hover:text-primary transition-colors p-2">
+              <button className="text-white hover:text-gray-300 transition-colors p-2">
                 👤
               </button>
-              <button className="text-foreground hover:text-primary transition-colors p-2 relative">
+              <button className="text-white hover:text-gray-300 transition-colors p-2 relative">
                 🛒
                 {getCartItemCount() > 0 && (
-                  <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
+                  <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-white text-black text-xs flex items-center justify-center">
                     {getCartItemCount()}
                   </span>
                 )}
@@ -239,26 +243,26 @@ export default function MerchPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-secondary/30">
+          <section className="relative py-20 md:py-32 bg-gray-900/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">
               GOODCLUB STORE
               <br />
               SHOP OUR COLLECTION
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 text-pretty max-w-2xl mx-auto">
               Discover our curated collection of premium Brazilian coffee, merchandise, and magazines. 
               Each item is carefully selected to bring you the authentic Joia experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/">
-                <button className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded transition-all">
+                <button className="bg-transparent border border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded transition-all">
                   VIEW GALLERY
                 </button>
               </Link>
               <button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded transition-all"
+                className="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded transition-all"
                 onClick={() => setActiveCategory("coffee")}
               >
                 SHOP COFFEE
@@ -272,7 +276,7 @@ export default function MerchPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               {activeCategory === "all"
                 ? "ALL PRODUCTS"
                 : activeCategory === "coffee"
@@ -281,7 +285,7 @@ export default function MerchPage() {
                     ? "MERCHANDISE"
                     : "GOODCLUB MAGAZINE"}
             </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-gray-300 max-w-2xl mx-auto">
               {activeCategory === "coffee"
                 ? "Premium Brazilian roasted whole beans, available in convenient sizes"
                 : activeCategory === "merch"
@@ -364,7 +368,7 @@ export default function MerchPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12">
+          <footer className="bg-black text-white py-12 border-t border-gray-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -398,7 +402,7 @@ export default function MerchPage() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-sm opacity-80">© 2025 Joia Coffee. All rights reserved.</p>
           </div>
         </div>

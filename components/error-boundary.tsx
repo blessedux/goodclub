@@ -60,7 +60,13 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
                 { src: "/premium-coffee-shop-hoodie-earth-tones.jpg", alt: "Joia Hoodie" },
                 { src: "/coffee-shop-t-shirt-minimalist-design.jpg", alt: "Joia T-Shirt" },
                 { src: "/coffee-shop-baseball-cap-earth-tones.jpg", alt: "Joia Cap" },
-                { src: "/minimalist-jewelry-set-coffee-inspired.jpg", alt: "Joia Jewelry Set" }
+                { src: "/minimalist-jewelry-set-coffee-inspired.jpg", alt: "Joia Jewelry Set" },
+                { src: "/premium-coffee-magazine-cover-minimalist-design.jpg", alt: "Joia Magazine" },
+                { src: "/d144e9_1da20c62e326486c8a73a048df815828~mv2.jpg", alt: "GOODCLUB Coffee" },
+                { src: "/d144e9_1fad2d95a7e348cd90e38ec957d7cd55~mv2.jpg", alt: "GOODCLUB Coffee" },
+                { src: "/d144e9_494da961124e4af39d5fc6944d59a27f~mv2.png", alt: "GOODCLUB Coffee" },
+                { src: "/d144e9_4ce62630c5c74029a01b4b98d5172d67~mv2_d_4000_6016_s_4_2.jpg", alt: "GOODCLUB Coffee" },
+                { src: "/d144e9_8cb8eaa760a24eeb97ff48dd5e589e73~mv2.jpg", alt: "GOODCLUB Coffee" }
               ].map((image, index) => (
                 <div key={index} style={{
                   width: '150px',

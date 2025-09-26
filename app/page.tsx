@@ -1,5 +1,5 @@
-import Gallery3D from "@/components/3d-gallery"
+import GalleryWrapper from "@/components/gallery-wrapper"
 
 export default function HomePage() {
-  return <Gallery3D />
+  return <GalleryWrapper />
 }
